@@ -6,12 +6,16 @@ services:
     image: pety3bi/sslh:latest
     ports:
       - 443:443
+    environment:
+      MTPROTO_PORT: 9050
+    depends_on:
+     - mtproto
 
   mtproto:
     container_name: mtproto
     image: telegrammessenger/proxy:latest
     ports:
-      - 443:443
+      - 9050:443
     volumes:
       - proxy-config:/data
 
