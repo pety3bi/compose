@@ -2,13 +2,13 @@ version: "2"
 
 services:
   sslh:
-    name: sslh
+    container_name: sslh
     image: pety3bi/sslh:latest
     ports:
       - 443:443
 
   mtproto:
-    name: mtproto
+    container_name: mtproto
     image: telegrammessenger/proxy:latest
     ports:
       - 443:443
