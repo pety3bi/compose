@@ -1,0 +1,5 @@
+version "2"
+
+  sslh:
+    name sslh
+    image: pety3bi/sslh:latest
